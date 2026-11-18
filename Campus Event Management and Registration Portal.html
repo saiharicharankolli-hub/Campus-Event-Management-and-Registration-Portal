@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://c8.alamy.com/comp/2RCMEHR/lpu-logo-lpu-letter-lpu-letter-logo-design-initials-lpu-logo-linked-with-circle-and-uppercase-monogram-logo-lpu-typography-for-technology-busines-2RCMEHR.jpg">
+    <title>Campous Event Management & Registration portal - LPU</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Segoe UI',sans-serif;
+        }
+
+        html{
+            scroll-behaviour:smooth;
+        }
+
+        body{
+            background: #f4f7fc;
+        }
+
+        nav{
+            background: #1e3c72;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            position: sticky;
+            top:0;
+            z-index:1000;
+        }
+
+        .logo{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+        }
+
+        .logo img{
+            width:55px;
+            border: radius 5px;
+        }
+
+        nav ul{
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li{
+            margin-left: 25px;
+        }
+
+        nav ul li a{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        nav ul li a:hover{
+            color: #ffd700;
+        }
+
+        .hero{
+            background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+            url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: white;
+            padding: 120px 20px;
+        }
+
+        .hero h1{
+            font-size: 55px;
+        }
+
+        .hero p{
+            font-size: 22px;
+            margin-top: 15px;
+        }
+
+        .hero p{
+            margin-top: 15px;
+        }
+
+        .btn{
+            display: inline-block;
+            margin-top: 20px;
+            background: #ffd700;
+            color: black;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: .4s;
+        }
+
+        .btn:hover{
+            transform: scale(1.05);
+            background: white;
+        }
+
+        section{
+            padding: 70px 10%;
+        }
+
+        .section-title{
+            text-align:center;
+            color: #1e3c72;
+            font-size: 36px;
+        }
+
+        .about{
+            text-align: center;
+            line-height: 1.9;
+            font-size: 18px;
+        }
+
+        .cards{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            gap: 25px;
+        }
+
+        .card{
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: .4s;
+        }
+
+        .card:hover{
+            transform: translateY(-10px);
+        }
+
+        .card h3{
+            color:#1e3c72;
+            margin-bottom: 10px;
+        }
+
+        .features{
+            display:grid;
+            grid-template-columns: repeat(auto-fit,mimax(250px,1fr));
+            gap: 20px;
+        }
+
+        .features-box{
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            border-radius: 10px;
+            transition: .4s;
+        }
+
+        .feature-box:hover{
+            background: #ffd700;
+            color: black;
+        }
+
+        form{
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        input,
+        select,
+        textarea{
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button{
+            width: 100%;
+            padding: 12px;
+            background: #1e3c72;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background: #12284f;
+        }
+
+        .contact{
+            text-align: center;
+            line-height: 2;
+        }
+
+        .contact a{
+            color: #1e3c72;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        footer{
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .quick-links{
+            text-align: center;
+        }
+
+        .quick-links a{
+            margin: 10px;
+        }
+
+        @media(max-width:768px){
+
+            nav{
+                flex-direction: column;
+            }
+
+            nav ul{
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 15px;
+            }
+
+            .hero h1{
+                font-size: 35px;
+            }
+
+            .hero p{
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYSrgwhK4b-nVh2y93n-DPF4XF9mCE-IWejzoeXEXHK7bPtLa0GAtmZoU&s=10" width="400px", height="600px">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr20GQTm9yiQrSG_rOI7l-S0aPD0HSLxHxrlInMJfJtCXGRuibVXEJ09Y&s=10" width="400px", height="600px">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGtXwy7Q_8sACHlO0gQBX3FZuosB2qQE9K8ZksvKypbQx_YxH8h6NU4Zq_&s=10" width="400px", height="600px">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh8PbOgT-YGRjxUslznRUEque4fxvT0Xk9GXHj6rDJvWOxjFr0ROoy8q2k&s=10" width="300px", height="600px">
+        </video>
+
+        <br></br>
+
+    </header>
+
+<!-- Navbar -->
+
+<nav>
+
+    <div class="logo">
+        <img src="data:image/jpeg;base64,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" alt="LPU Logo">  
+        <h2>LPU Events</h2>
+    </div>
+</nav>
+
+<nav>
+    <ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#events">Events</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#register">Register</a></li>
+<li><a href="#links">Links</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- Hero Section -->
+
+<section class="hero" id="home">
+
+    <h1>Campus Event Managment & Registration Portal </h1>
+
+    <p>Lovely Professional University</p>
+
+    <p>Discover • Register • Participate • Achieve</p>
+
+    <a href="#register" class="btn">Register Now</a>
+
+</section>
+
+<!-- About Section-->
+
+<section id="about">
+
+    <h2 class="section-title">About Portal</h2>
+
+    <div class="about">
+
+     <p>
+
+Campus Event Management & Registration Portal is a centralized digital
+platform developed for students, faculty and event organizers at
+Lovely Professional University.
+
+The portal simplifies event discovery, registration and participation
+for technical competitions, workshops, conferences, cultural programs,
+sports activities and university events.
+
+Students can explore upcoming events, register online and access useful
+resources through one platform.
+
+</p>   
+
+    </div>
+
+</section>
+
+<!-- Event Section -->
+
+<section id="events">
+
+    <h2 class="section-title">Upcoming Events</h2>
+
+    <div class="cards">
+
+        <div class="card">
+<h3>TechSprint 4.0</h3>
+<p><b>Date:</b> 13-14 November 2026</p>
+<p><b>Venue:</b> LPU Campus</p>
+<p>National level technology and innovation competition.</p>
+
+<a href="https://lpuevents.live/about"
+target="_blank"
+class="btn">
+More Information
+</a>
+</div>
+
+<div class="card">
+<h3>Satinder Sartaaj Live</h3>
+<p><b>Date:</b> 29 November 2026</p>
+<p><b>Venue:</b> LPU Auditorium</p>
+<p>Live music, poetry and entertainment event.</p>
+
+<a href="https://happenings.lpu.in/"
+target="_blank"
+class="btn">
+View Details
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>International Conference on Education Quality (ICEQ)</h3>
+
+<p><b>Date:</b> 6 January 2027</p>
+
+<p><b>Venue:</b> LPU Campus</p>
+
+<p>International conference focused on educational excellence.</p>
+
+<a href="https://www.lpude.in/en/events/events"
+target="_blank"
+class="btn">
+Conference Details
+</a>
+
+</div>
+
+    </div>
+
+</section>
+
+<!-- Features -->
+
+<section id="features">
+
+    <h2 class="section-title">Portal Features</h2>
+
+    <div class="features">
+
+<div class="feature-box">✅ Online Registration</div>
+<div class="feature-box">✅ Live Event Updates</div>
+<div class="feature-box">✅ Event Calendar</div>
+<div class="feature-box">✅ Participation Tracking</div>
+<div class="feature-box">✅ Certificate Access</div>
+<div class="feature-box">✅ Mobile Responsive</div>
+<div class="feature-box">✅ Notifications</div>
+<div class="feature-box">✅ Secure Registration</div>
+
+</div>
+
+</section>
+
+<!-- Registration Section -->
+
+<section id="register">
+
+    <h2 class="section-title">Event Registration Form</h2>
+
+<form id="eventForm">
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="text" placeholder="Registration Number" required>
+
+<input type="text" placeholder="Department" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<select required>
+<option value="">Select Event</option>
+<option>TechSprint 4.0</option>
+<option>Satinder Sartaaj Live</option>
+<option>ICEQ Conference</option>
+</select>
+
+<input type="text" placeholder="Year of Study" required>
+
+<button type="submit">
+Submit Registration
+</button>
+
+</form>
+
+</section>
+
+<!-- Useful Links -->
+
+<section id="links">
+
+    <h2 class="section-title">Useful Links & Resources</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>LPU Events Portal</h3>
+<p>Official campus-wide event portal.</p>
+
+<a href="https://lpuevents.live/about"
+target="_blank"
+class="btn">
+Open Portal
+</a>
+
+</div>
+
+<div class="card">
+<h3>LPU Happenings</h3>
+<p>News, achievements and event updates.</p>
+
+<a href="https://happenings.lpu.in/"
+target="_blank"
+class="btn">
+Visit Website
+</a>
+
+</div>
+
+<div class="card">
+<h3>Campus Events Directory</h3>
+<p>Annual fests, workshops and celebrations.</p>
+
+<a href="https://www.lpu.in/campus-life/campus-events.php"
+target="_blank"
+class="btn">
+Explore Events
+</a>
+
+</div>
+
+<div class="card">
+<h3>Event Certificates</h3>
+<p>Download participation certificates online.</p>
+
+<a href="https://www.lpu.in/EventCertificate/index.aspx"
+target="_blank"
+class="btn">
+Get Certificate
+</a>
+
+</div>
+
+<div class="card">
+<h3>LPUDE Events</h3>
+<p>Distance education events and webinars.</p>
+
+<a href="https://www.lpude.in/en/events/events"
+target="_blank"
+class="btn">
+Open LPUDE
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Quick Access-->
+
+<section>
+
+    <h2 class="section-title">Qick Access</h2>
+
+    <div class="quick-links">
+
+<a href="https://lpuevents.live/about" target="_blank" class="btn">
+LPU Events
+</a>
+
+<a href="https://happenings.lpu.in/" target="_blank" class="btn">
+Happenings
+</a>
+
+<a href="https://www.lpu.in/campus-life/campus-events.php" target="_blank" class="btn">
+Event Directory
+</a>
+
+<a href="https://www.lpu.in/EventCertificate/index.aspx" target="_blank" class="btn">
+Certificates
+</a>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact">
+
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact">
+
+<p><strong>Lovely Professional University</strong></p>
+
+<p>
+Jalandhar-Delhi G.T Road,
+Phagwara, Punjab - 144411
+</p>
+
+<p>
+📧
+<a href="mailto:info@lpu.co.in">
+info@lpu.co.in
+</a>
+</p>
+
+<p>
+📧
+<a href="mailto:admissions@lpu.co.in">
+admissions@lpu.co.in
+</a>
+</p>
+
+<p>
+📞
+<a href="tel:+911824517000">
++91-1824-517000
+</a>
+</p>
+
+<p>
+📞
+<a href="tel:+911824404404">
++91-1824-404404
+</a>
+</p>
+
+<p>
+💬
+<a href="https://wa.me/919852569000"
+target="_blank">
+WhatsApp Support
+</a>
+</p>
+
+<p>
+📍
+<a href="https://maps.google.com/?q=Lovely+Professional+University+Phagwara"
+target="_blank">
+Open LPU in Google Maps
+</a>
+</p>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+    <p>
+        2026 Campus Event Managment & Registration Portal
+    </p>
+
+    <p>
+        CSE-326 Project | Lovely Professional University
+    </p>
+
+</footer>
+
+<script>
+    document.getElementById("eventForm")
+    .addEventListener("submit",function(e){
+
+        e.preventDefault();
+
+        alert("Registration Sobmitted Successfully!");
+
+        this.result();
+
+    });
+
+</script>
+
+</body>
+
+</html>
